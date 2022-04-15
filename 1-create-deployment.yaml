@@ -18,8 +18,29 @@ spec:
             - name: PORT
               value: "8080"
 
-# check status minikube
+# 1. check status minikube
 # minikube profile list
 
-# run a new minikube
+# 2. run a new minikube
 # minikube start
+
+# 3. Command apply config:
+# kubect apply -f 1-create-deployment.yaml
+
+# 4. Command get list deployments:
+# kubectl get deployments
+
+# 5. Command untuk get list pods:
+# kubectl get pods
+
+# 6. Command untuk remote ssh ke pod:
+# kubectl exec -it <nama-pod> -- /bin/sh
+
+# 7. Command untuk check listened port di linux:
+# netstat -tulpn
+
+# 8. Command curl
+# curl localhost:8080
+
+# 9. Command install curl di alpine OS:
+# apk add curl
