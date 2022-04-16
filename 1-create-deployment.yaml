@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app1
+  name: my-app-deployment1
 spec:
   selector:
     matchLabels:
@@ -12,10 +12,13 @@ spec:
         name: my-app1
     spec:
       containers:
-        - name: my-app1
+        - name: hello-world
           image: adamstudiodocker/udemy-praktis-belajar-docker-dan-kubernetes-untuk-pemula:hello-world
           ports:
             - containerPort: 8080
+          env:
+            - name: PORT
+              value: "8080"
 
 # 1. check status minikube
 # minikube profile list
