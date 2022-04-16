@@ -9,3 +9,12 @@ spec:
   ports:
     - port: 8080
       targetPort: 8080
+
+# 3. Command apply service:
+# kubectl apply -f 3-create-service.yaml
+
+# expose deployment, an service will be created
+# kubectl expose deployment my-app-deployment1 --type=LoadBalancer --port=8080
+
+# get service url
+# minikube service my-app-deployment1 --url
