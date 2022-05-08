@@ -1,0 +1,39 @@
+amira@aspire:~$ kubectl describe service my-app-deployment2
+Name:                     my-app-deployment2
+Namespace:                default
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 app=my-app2
+Type:                     LoadBalancer
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.104.222.55
+IPs:                      10.104.222.55
+Port:                     <unset>  3306/TCP
+TargetPort:               3306/TCP
+NodePort:                 <unset>  32316/TCP
+Endpoints:                172.17.0.4:3306
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+amira@aspire:~$ kubectl describe service my-service2
+Name:                     my-service2
+Namespace:                default
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 name=my-app2
+Type:                     LoadBalancer
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.105.102.45
+IPs:                      10.105.102.45
+Port:                     <unset>  3306/TCP
+TargetPort:               3306/TCP
+NodePort:                 <unset>  31158/TCP
+Endpoints:                <none>
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:
+  Type    Reason  Age    From                Message
+  ----    ------  ----   ----                -------
+  Normal  Type    9m41s  service-controller  ClusterIP -> LoadBalancer
