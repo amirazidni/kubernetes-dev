@@ -23,7 +23,7 @@ spec:
             - name: INSTANCE_ID
               valueFrom:
                 fieldRef:
-                  fieldPath: metadata.name
+                  fieldPath: metadata.name # mengambil instance id dari metadata.name
           resources:
             limits:
               cpu: 250m
