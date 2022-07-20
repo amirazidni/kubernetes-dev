@@ -1,14 +1,14 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: myapp
+  name: my-auto-scaler
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: myapp
-  minReplicas: 1
-  maxReplicas: 3
+    name: my-app-deployment5
+  minReplicas: 1 # minimal jika trafic minim
+  maxReplicas: 3 # minimal jika trafic banyak
   metrics:
   - type: Resource
     resource:
@@ -16,3 +16,18 @@ spec:
       target:
         type: Utilization
         averageUtilization: 50
+
+# menambahkan metrics-server
+# minikube addons enable metrics-server
+
+# melihat url dari service
+# minikube service my-service5 --url
+
+# melihat horizontal pod autoscaler (HPA)
+# kubectl get hpa
+
+# benchmarking
+# https://github.com/rakyll/hey
+
+# lihat hasil pod autoscaler
+# kubectl get pods --watch
