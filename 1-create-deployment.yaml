@@ -27,7 +27,7 @@ spec:
 # minikube start
 
 # 3. Command apply config:
-# kubect apply -f 1-create-deployment.yaml
+# kubectl apply -f 1-create-deployment.yaml
 
 # 4. Command get list deployments:
 # kubectl get deployments
