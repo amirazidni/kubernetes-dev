@@ -6,6 +6,9 @@ metadata:
     name: my-pod1
     description: this-is-label-example
     label-is-not-strict: you-can-change-label-name
+  annotations:
+    annotation-key1: annotation-value
+    annotation-key2: very long annotation value, bla bla bla bla bla bla
 spec:
   containers:
   - name: hello-world
