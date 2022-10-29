@@ -27,3 +27,12 @@ spec:
 
 # 5. delete pod
 # kubectl delete pod my-pod1
+
+# get detail pods (IP and other)
+# kubectl get pod -o wide
+
+# access pod, just to test
+# kubectl port-forward namapod portForwarded:portInternal
+# example: 
+# kubectl port-forward my-app-deployment1-7dbbf56bbf-dt6r4 9191:8080
+# access at localhost:9191
