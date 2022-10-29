@@ -4,6 +4,8 @@ metadata:
   name: my-pod1
   labels:
     name: my-pod1
+    description: this-is-label-example
+    label-is-not-strict: you-can-change-label-name
 spec:
   containers:
   - name: hello-world
@@ -36,3 +38,10 @@ spec:
 # example: 
 # kubectl port-forward my-app-deployment1-7dbbf56bbf-dt6r4 9191:8080
 # access at localhost:9191
+
+# get pods with label
+# kubectl get pods --show-labels
+
+# search pods with query label
+# kubectl get pods -l app
+# kubectl get pods -l '!app' --show-labels
