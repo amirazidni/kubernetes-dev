@@ -48,3 +48,6 @@ spec:
 # search pods with query label
 # kubectl get pods -l app
 # kubectl get pods -l '!app' --show-labels
+
+# delete pod with label (key=value)
+# kubectl delete pod -l environment=development
