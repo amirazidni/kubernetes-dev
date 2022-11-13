@@ -14,3 +14,6 @@ metadata:
 
 # fetch all pods in all namespaces
 # kubectl get pods --all-namespaces
+
+# delete pod with namespace without deleting namespace
+# kubectl delete pod --all --namespace my-namespace1
