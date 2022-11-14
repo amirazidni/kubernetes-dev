@@ -23,3 +23,9 @@ spec:
 
 # show
 # kubectl get rc
+
+# remove
+# kubectl delete rc nginx-rc
+
+# remove without deleting pod
+# kubectl delete rc nginx-rc --cascade=orphan
