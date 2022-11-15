@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-rs
+spec:
+  replicas: 3 
+  selector: # diff here
+    matchLabels:
+      app: nginx-rs
+  template:
+    metadata:
+      name: nginx-pod-rs
+      labels:
+        app: nginx-rs
+    spec:
+      containers:
+      - name: nginx-rs
+        image: nginx
+        ports:
+        - containerPort: 80
+
+# kubectl apply -f 13-replica-set.yaml
+
+# get replica set
+# kubectl get rs
