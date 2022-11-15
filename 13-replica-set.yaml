@@ -5,13 +5,25 @@ metadata:
 spec:
   replicas: 3 
   selector: # diff here
-    matchLabels:
-      app: nginx-rs
+    # matchLabels:
+    #   app: nginx-rs
+    matchExpressions: # pros of RS
+      - key: app
+        operator: In
+        values:
+          - nginx-rs
+      - key: env
+        operator: In
+        values:
+          - prod
+          - qa
+          - dev
   template:
     metadata:
       name: nginx-pod-rs
       labels:
         app: nginx-rs
+        env: prod
     spec:
       containers:
       - name: nginx-rs
