@@ -5,6 +5,8 @@ metadata:
   labels:
     name: nodejs-cronjob
 spec:
+  nodeSelector:
+    gpu: "true"
   schedule: "* * * * *"
   jobTemplate:
     spec:
@@ -24,3 +26,6 @@ spec:
 # kubectl get cronjobs
 # kubectl describe cronjob nodejs-cronjob
 # kubectl delete cronjob nodejs-cronjob
+
+# Add label node for node selector
+# kubectl label node minikube key=value
