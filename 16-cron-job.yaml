@@ -29,3 +29,11 @@ spec:
 
 # Add label node for node selector
 # kubectl label node minikube key=value
+
+# get all resource
+# kubectl get all
+# kubectl get all --namespace kube-system
+
+# remove all resource
+# kubectl delete all --all
+# kubectl delete all --all --namespace namanamespace
