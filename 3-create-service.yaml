@@ -21,3 +21,57 @@ spec:
 
 # OPEN DASHBOARD
 # minikube dashboard
+
+---
+# Update PZN
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: nginx
+  template:
+    metadata:
+      name: nginx
+      labels:
+        name: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          ports:
+            - containerPort: 80
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    name: nginx
+  ports:
+    - port: 8080
+      targetPort: 80
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: curl
+  labels:
+    name: curl
+spec:
+  containers:
+    - name: curl
+      image: khannedy/nginx-curl
+
+# access cluster and services
+# kubectl exec -it pod/curl -- /bin/sh
+# curl http://10.96.219.135:8080
