@@ -72,6 +72,21 @@ spec:
     - name: curl
       image: khannedy/nginx-curl
 
-# access cluster and services
+# Access cluster and services (pod inside cluster)
 # kubectl exec -it pod/curl -- /bin/sh
 # curl http://10.96.219.135:8080
+
+
+# Get pod envs
+# kubectl exec pod/curl -- env
+# kubectl exec pod/curl -- env | grep NGINX_SERVICE_SERVICE
+
+# Service DNS
+# nama-service.nama-namespace.svc.cluster.local
+# nginx-service.default.svc.cluster.local:8080
+
+# Test ping
+# kubectl exec pod/curl -- curl http://nginx-service.default.svc.cluster.local:8080
+
+# Get endpoints
+# kubectl get endpoints
