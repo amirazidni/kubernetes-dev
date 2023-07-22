@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: hello-world
-          image: adamstudiodocker/udemy-praktis-belajar-docker-dan-kubernetes-untuk-pemula:hello-world
+          image: amira/nodejs-job
           ports:
             - containerPort: 8080
           env:

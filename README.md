@@ -1,3 +1,3 @@
 # kubernetes-dev
 
-A repository to organise and document my learning projects using Kubernetes.
+A repository to organize and review back developments using Kubernetes.

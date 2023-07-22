@@ -11,7 +11,7 @@ spec:
       restartPolicy: Never
       containers:
         - name: nodejs-job
-          image: khannedy/nodejs-job
+          image: amira/nodejs-job
 
 # kubectl apply -f 15-create-job.yaml
 

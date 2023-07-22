@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: hello-world
-          image: adamstudiodocker/udemy-praktis-belajar-docker-dan-kubernetes-untuk-pemula:hello-world
+          image: amira/nodejs-job
           env:
             - name: PORT
               value: "8081"

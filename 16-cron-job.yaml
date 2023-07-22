@@ -19,7 +19,7 @@ spec:
           restartPolicy: Never
           containers:
             - name: nodejs-cronjob
-              image: khannedy/nodejs-job
+              image: amira/nodejs-job
 
 # kubectl apply -f 16-cron-job.yaml
 

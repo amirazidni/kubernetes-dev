@@ -1,6 +1,8 @@
+#!/bin/env bash
+
 # connect ke minikube via ssh
-# minikube ssh
+minikube ssh
 
 # melihat root directory hasil mounting
-# ls /
+ls /
 # cek file nomor 4
